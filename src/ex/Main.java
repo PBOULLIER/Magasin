@@ -1,8 +1,20 @@
 package ex;
 
+import java.awt.*;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    GraphicalApplication monAppli =  new GraphicalApplication();
+                    monAppli.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("L'application à detecter une erreur de type " + e.getMessage());
+                }
+            }
+        });
     }
 }
