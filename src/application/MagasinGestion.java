@@ -11,61 +11,59 @@ public class MagasinGestion {
 
     public MagasinGestion() {
 
-        System.out.println("This is a list of products available :");
+        System.out.println("Ce que nous avons en stock");
 
-        Article product0 = new Article("Saumon", 12, 50, 1);
-        Article product1 = new Article("PQ", 6, 50, 2);
-        Article product2 = new Article("Jeux", 60, 300, 2);
-        monMagasin.getListeDesArticles().add(product0);
-        monMagasin.getListeDesArticles().add(product1);
-        monMagasin.getListeDesArticles().add(product2);
+        Article article0 = new Article("Saumon", 12, 50, 0);
+        Article article1 = new Article("PQ", 6, 50, 1);
+        Article article2 = new Article("Jeux", 60, 300, 2);
 
-        chooseInTheListOfProducts();
+
+        monMagasin.getListeDesArticles().add(article0);
+        monMagasin.getListeDesArticles().add(article1);
+        monMagasin.getListeDesArticles().add(article2);
+
+        choixListeArticle();
 
     }
 
 
-    public void chooseInTheListOfProducts() {
+    public void choixListeArticle() {
 
-        int chooseItem;
-        int chooseQuantity;
+        int choixArticle;
+        int choixQuantite;
         int result;
-        //String continueShopping;
+
 
 
         for (int i = 1; i < monMagasin.getListeDesArticles().size(); i++) {
-            System.out.println(monMagasin.getListeDesArticles().get(i).getIndex() + " " + monMagasin.getListeDesArticles().get(i).getNom() + " "
-                    + monMagasin.getListeDesArticles().get(i).getQuantite() + " " + monMagasin.getListeDesArticles().get(i).getPrixVente());
+            System.out.println(monMagasin.getListeDesArticles().get(i).getNom() + " " + monMagasin.getListeDesArticles().get(i).getPrixVente() + " "
+                    + monMagasin.getListeDesArticles().get(i).getQuantite() + "  Numéro à entrer :" + monMagasin.getListeDesArticles().get(i).getIndex());
         }
 
-        /*System.out.println("Press any key, or q to quit :");
 
-        continueShopping = sc.nextLine();
-        if(!continueShopping.equalsIgnoreCase("q"))*/
+        choixArticle = sc.nextInt();
 
-        chooseItem = sc.nextInt();
+        while (choixArticle != 0) {
 
-        while (chooseItem != 0) {
-
-            if (monMagasin.getListeDesArticles().get(chooseItem).getQuantite() == 0) {
-                System.out.println("No more product available");
+            if (monMagasin.getListeDesArticles().get(choixArticle).getQuantite() == 0) {
+                System.out.println("Rupture de Stock");
 
             } else {
 
-                System.out.println(monMagasin.getListeDesArticles().get(chooseItem).getIndex() + " " + monMagasin.getListeDesArticles().get(chooseItem).getNom());
+                System.out.println(monMagasin.getListeDesArticles().get(choixArticle).getIndex() + " " + monMagasin.getListeDesArticles().get(choixArticle).getNom());
 
-                System.out.println("How much do you want ?");
-                //Choose a quantity
-                chooseQuantity = sc.nextInt();
-                //Subtract the initial quantity to the chosen one
-                result = monMagasin.getListeDesArticles().get(chooseItem).getQuantite() - chooseQuantity;
-                //Update the new quantity
-                monMagasin.getListeDesArticles().get(chooseItem).setQuantite(result);
+                System.out.println("Combien en voulez vous ?");
 
-                System.out.println("There is " + result + " left");
+                choixQuantite = sc.nextInt();
+
+                result = monMagasin.getListeDesArticles().get(choixArticle).getQuantite() - choixQuantite;
+
+                monMagasin.getListeDesArticles().get(choixArticle).setQuantite(result);
+
+                System.out.println("Il y a" + result + "restant(s)");
 
             }
-            chooseInTheListOfProducts();
+            choixListeArticle();
         }
 
     }

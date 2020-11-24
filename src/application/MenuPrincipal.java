@@ -6,7 +6,6 @@ public class MenuPrincipal {
 
     public MenuPrincipal(){
 
-        //First menu to appear, we can choose if we use the app as a client or as an admin
 
         int Choix;
         Scanner sc = new Scanner(System.in);
