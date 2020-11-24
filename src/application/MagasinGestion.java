@@ -59,14 +59,14 @@ public class MagasinGestion {
 
 
 
-        ///////////////// Ajout fonction sortir du menu pour revenir vers le panier needed; ///////////////////////
+        //Ajout fonction sortir du menu pour revenir vers le panier needed;
 
-        System.out.println("Pour quitter entrez q");
+        //System.out.println("Pour quitter entrez q");
 
-        continuer = sc.nextLine();
-        if(!continuer.equalsIgnoreCase("q"));
+        //continuer = sc.nextLine();
+        //if(!continuer.equalsIgnoreCase("q"));
         choixArticle = sc.nextInt();
-        choixListeArticle();
+
 
         // gestion d'une rupture de stock
         while (choixArticle != 0) {
@@ -87,10 +87,10 @@ public class MagasinGestion {
 
                 monMagasin.getListeDesArticles().get(choixArticle).setQuantite(result);
 
-                System.out.println("Il y a" + result + "restant(s)");
+                System.out.println("Il y a " + result + "restant(s)");
 
             }
-
+            choixListeArticle();
         }
 
     }

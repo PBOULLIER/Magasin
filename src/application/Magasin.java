@@ -18,5 +18,4 @@ public class Magasin {
     public ArrayList<Article> getListeDesArticles() {
         return listeDesArticles;
     }
-
 }
