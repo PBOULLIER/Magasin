@@ -1,7 +1,6 @@
 package ex;
 
 import application.MenuPrincipal;
-
 import java.awt.*;
 
 public class Main {

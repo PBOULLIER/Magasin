@@ -6,9 +6,9 @@ public class MenuPrincipal {
 
     public MenuPrincipal(){
 
-
-        int Choix;
-        Scanner sc = new Scanner(System.in);
+        /********************************************************/
+        /**********     Affichage du menu Principal    **********/
+        /********************************************************/
 
         System.out.println("Bienvenue");
         System.out.println("Tappez le numéro correspondant à l'action souhaitée");
@@ -16,6 +16,10 @@ public class MenuPrincipal {
         System.out.println("2 Se connecter en tant qu'Administrateur");
         System.out.println("3 Exit");
 
+
+        // Gestion des choix du menuPrincipal + création des instances des éléments choisis
+        Scanner sc = new Scanner(System.in);
+        int Choix;
         Choix = sc.nextInt();
 
         switch (Choix){
