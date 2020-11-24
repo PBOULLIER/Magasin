@@ -60,15 +60,13 @@ public class MagasinGestion {
 
 
         ///////////////// Ajout fonction sortir du menu pour revenir vers le panier needed; ///////////////////////
-        choixListeArticle();
 
-        System.out.println("Press any key, or q to quit :");
+        System.out.println("Pour quitter entrez q");
 
         continuer = sc.nextLine();
         if(!continuer.equalsIgnoreCase("q"));
         choixArticle = sc.nextInt();
-
-
+        choixListeArticle();
 
         // gestion d'une rupture de stock
         while (choixArticle != 0) {
