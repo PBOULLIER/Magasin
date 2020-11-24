@@ -1,4 +1,4 @@
-package Magasin;
+package objets;
 
 public class Article {
 
