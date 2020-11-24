@@ -32,14 +32,16 @@ public class MagasinGestion {
         int choixArticle;
         int choixQuantite;
         int result;
+        String continuer;
 
 
 
         for (int i = 1; i < monMagasin.getListeDesArticles().size(); i++) {
             System.out.println(monMagasin.getListeDesArticles().get(i).getNom() + " " + monMagasin.getListeDesArticles().get(i).getPrixVente() + " "
-                    + monMagasin.getListeDesArticles().get(i).getQuantite() + "  Numéro à entrer :" + monMagasin.getListeDesArticles().get(i).getIndex());
+                    + monMagasin.getListeDesArticles().get(i).getQuantite() + "  Numéro à entrer : " + monMagasin.getListeDesArticles().get(i).getIndex());
         }
 
+        // Ajout fonction sortir du menu pour revenir vers le panier needed;
 
         choixArticle = sc.nextInt();
 
@@ -64,6 +66,11 @@ public class MagasinGestion {
 
             }
             choixListeArticle();
+
+            System.out.println("Press any key, or q to quit :");
+
+            continuer = sc.nextLine();
+            if(!continuer.equalsIgnoreCase("q"));
         }
 
     }
