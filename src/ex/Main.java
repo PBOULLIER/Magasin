@@ -1,6 +1,6 @@
 package ex;
 
-import magasin.Magasin;
+import application.MenuPrincipal;
 
 import java.awt.*;
 
@@ -10,7 +10,7 @@ public class Main {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                     new magasin.Magasin();
+                     new MenuPrincipal();
                   //  Gra monAppli =  new GraphicalApplication();
                   //  monAppli.setVisible(true);
                 } catch (Exception e) {

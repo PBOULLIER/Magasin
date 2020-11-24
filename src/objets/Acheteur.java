@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Acheteur {
 
+    /*
     private String nom;
 
     private ArrayList<Article> listArtciles = null;
@@ -32,4 +33,6 @@ public class Acheteur {
 
 
     }
+
+     */
 }

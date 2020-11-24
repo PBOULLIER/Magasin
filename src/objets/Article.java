@@ -4,12 +4,14 @@ public class Article {
 
     private String nom;
     private double prixVente;
-    private int stock;
+    private int quantite;
+    private int index;
 
-    public Article(String nom, double prixVente, int stock) {
+    public Article(String nom, double prixVente, int quantite, int index) {
         this.nom = nom;
         this.prixVente = prixVente;
-        this.stock = stock;
+        this.quantite = quantite;
+        this.index = index;
     }
 
     public String getNom() {
@@ -28,11 +30,19 @@ public class Article {
         this.prixVente = prixVente;
     }
 
-    public int getStock() {
-        return stock;
+    public int getQuantite() {
+        return quantite;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
     }
 }
